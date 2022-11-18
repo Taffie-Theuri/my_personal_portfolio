@@ -42,10 +42,56 @@
                         I have a keen interest in anything software development.<br>
                         I am always willing to learn and develop my interests further.<br>
                         I look forward to working with you.</p>
+                        <div class="section-names">
+                            <p class="section-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="section-links" onclick="opentab('Education')">Education</p>
+                            <p class="section-links" onclick="opentab('Experience')">Experience</p>
+
+                    </div>
+                    <div class="section-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span> Mobile development</span><br>Building Android apps</li>
+                            <li><span>Web development</span><br>Web development</li>
+                            <li><span> UI/UX</span><br>Designing web app interfaces</li>
+                        </ul>
+
+                    </div>
+                    <div class="section-contents" id="Education">
+                        <ul>
+                            <li><span>Strathmore University</span><br>Bsc. Computer Science</li>
+                            <li><span>Strathmore University</span><br>AI/ML Certification</li>
+                            <li><span> Moringa School</span><br>Software development Certification</li>
+                        </ul>
+
+                    </div>
+                    <div class="section-contents" id="Experience">
+                        <ul>
+                            <li><span> Mobile development</span><br>Built Android app</li>
+                            <li><span>Web development</span><br>Web development</li>
+                            <li><span> UI/UX</span><br>Designing web app interfaces</li>
+                        </ul>
+
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
-   <script src="script.js"></script>
+  <!--src="script.js"-->
+  <script >
+var sectionlinks = document.getElementsByClassName("section-links");
+var sectioncontents = document.getElementsByClassName("section-contents");
+ function opentab(sectionName){
+    for(sectionlink of sectionlinks){
+        sectionlink.classList.remove("active-link");
+    }
+    for(sectioncontent of sectioncontents){
+        sectioncontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById("sectionName").classList.add("active-tab");
+ }
+  </script>
 </body>
 </html>
